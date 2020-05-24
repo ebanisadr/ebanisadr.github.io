@@ -1,12 +1,15 @@
 /**
- * CSS written/edited by hand by me.
- * Heavily based on Water.css (https://github.com/kognise/water.css)
+ * CSS written/edited by hand by Eric Banisadr.
+ * Based on Water.css (https://github.com/kognise/water.css)
  */
 
 /* TODO selfhost fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 @import
 url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+/* Theme variables */
 
 :root {
   --title-fonts: 'Bitter', 'Palatino Linotype', Palatino, serif;
@@ -56,25 +59,101 @@ url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
   --code-params: #7fbcf0;
 }}
 
+/* Semantic layout elements */
+
 body {
   font-family: var(--body-fonts);
   font-size: 20px;
-  line-height: 1.65;
-  text-align: justify;
-
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
 
   max-width: 800px;
   margin: 20px auto;
   padding: 0 10px;
-  word-wrap: break-word;
+
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 40px);
 
   color: var(--text-main);
   background: var(--background-body);
 
   text-rendering: optimizeLegibility;
+}
+
+main {
+  flex-grow: 1;
+}
+
+article {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
+  word-wrap: break-word;
+
+  line-height: 1.65;
+  text-align: justify;
+}
+
+main.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.info-card img {
+  border-radius: 266px;
+}
+
+main.info-card * {
+  margin: 0.5em 0 0 0;
+  color: var(--text-main);
+}
+
+footer {
+  padding-top: 10px;
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--text-muted);
+}
+/* page header */
+
+body > header > nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+body > header > nav * {
+  align-self: baseline;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+body > header > nav li {
+  margin-left: 5px;
+}
+
+body > header > nav li:first-child {
+  margin-left: 0;
+}
+
+body > header > nav a:hover {
+  text-decoration: none;
+}
+
+/* page footer */
+
+body > footer {
+  display: flex;
+  flex-flow: inline wrap;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--background);
 }
 
 /* headings and bold */
@@ -84,7 +163,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
   color: var(--text-bright);
   font-weight: 600;
-  line-height: 1;
 }
 
 h1 {
@@ -149,6 +227,20 @@ hr {
   border-top: 1px solid var(--border);
 }
 
+small {
+  color: var(--text-muted);
+}
+
+span.social-icons svg {
+  border-radius: 4px;
+}
+
+span.social-icons svg path {
+  fill: var(--text-muted);
+}
+
+/* Tables */
+
 table {
   border-collapse: collapse;
   margin-bottom: 10px;
@@ -208,13 +300,6 @@ details > :not(summary) {
 
 summary::-webkit-details-marker {
   color: var(--text-main);
-}
-
-footer {
-  border-top: 1px solid var(--background);
-  padding-top: 10px;
-  font-size: 0.8em;
-  color: var(--text-muted);
 }
 
 abbr[title] {
@@ -320,75 +405,4 @@ code .emphasis {
 
 code .strong {
   font-weight: bold;
-}
-
-/* page header */
-
-header {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-header a {
-  color: var(--text-bright);
-}
-
-header a h2 {
-  margin: 0px 0.5em 0px 0px;
-}
-
-
-header nav {
-  display: inline;
-  margin-bottom: 0.25em;
-  align-self: baseline;
-  margin-top: auto;
-}
-
-header nav a {
-  margin-right: 8px;
-  color: var(--text-muted);
-}
-
-header span {
-  white-space: nowrap;
-  text-align: center;
-  flex-grow: 1;
-  align-self: flex-end;
-}
-
-header span a:hover {
-  text-decoration: none;
-}
-
-header svg path {
-  fill: var(--text-muted);
-}
-
-header svg {
-  border-radius: 4px;
-}
-
-@media (min-width: 370px) {
-  header nav {
-    order: 3;
-  }
-  header span {
-    order: 2;
-    text-align: right;
-  }
-}
-
-@media (min-width: 580px)  {
-  header nav {
-    order: initial;
-  }
-  header span {
-    order: initial;
-  }
-}
-
-/* footer */
-footer a {
-  color: var(--text-muted);
 }
