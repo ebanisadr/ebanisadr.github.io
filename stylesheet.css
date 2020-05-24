@@ -84,14 +84,17 @@ main {
 }
 
 article {
+  line-height: 1.7;
+}
+
+article p, li {
+  text-align: justify;
+
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 
   word-wrap: break-word;
-
-  line-height: 1.65;
-  text-align: justify;
 }
 
 main.info-card {
@@ -317,6 +320,12 @@ code {
   padding: 2.5px 5px;
   border-radius: 6px;
   font-size: 0.85em;
+  word-wrap: normal;
+
+  /* remove hyphens for inline code */
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 pre > code {
@@ -324,9 +333,6 @@ pre > code {
   display: block;
   overflow-x: auto;
   white-space: pre;
-  /* Fix for to make horizontal scoll work in  Safari
-   * https://stackoverflow.com/questions/44754987 */
-  word-wrap: normal;
 }
 
 kbd {
