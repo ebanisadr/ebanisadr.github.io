@@ -1,0 +1,7 @@
+---
+url: 'https://ericbanisadr.com'
+collections:
+  blog:
+    output: true
+    permalink: /:collection/:name
+---

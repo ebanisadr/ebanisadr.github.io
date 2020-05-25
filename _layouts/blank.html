@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    {% include head.html %}
+    <title>{% if page.title %}{{ page.title }} | {% endif %}Eric Banisadr</title>
+  </head>
+
+  <body>
+    {% include header.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
