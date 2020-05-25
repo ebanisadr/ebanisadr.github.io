@@ -63,12 +63,12 @@ url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 body {
   font-family: var(--body-fonts);
-  font-size: 20px;
+  font-size: 16px;
 
   max-width: 800px;
   margin: 20px auto;
   /* left padding keeps content centered if a scrollbar shows up on the right */
-  padding: 0 0 10px calc(100vw - 100%);
+  padding: 0 10px 10px calc(100vw - 100% + 10px);
 
   display: flex;
   flex-direction: column;
@@ -78,6 +78,12 @@ body {
   background: var(--background-body);
 
   text-rendering: optimizeLegibility;
+}
+
+@media(min-width: 450px) {
+  body {
+    font-size: 20px;
+  }
 }
 
 main {
@@ -117,7 +123,7 @@ main.info-card * {
 section.post-listing {
   line-height: 1.7;
 }
-section.post-listing ul, li {
+section.post-listing ul, section.post-listing li {
   list-style-type: none;
   padding: 0;
 }
@@ -319,11 +325,27 @@ summary::-webkit-details-marker {
   color: var(--text-main);
 }
 
-abbr[title] {
-  cursor: help;
-  text-decoration:underline;
-  text-decoration-style: dotted;
+abbr[title]:after {
+  content: " (" attr(title) ")";
 }
+
+@media(any-hover: hover) {
+  abbr[title]:after {
+    content: none;
+  }
+
+  abbr[title] {
+    cursor: help;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
+  abbr[title]:hover::after {
+    content: " (" attr(title) ")";
+  }
+}
+
+
 
 /* code formatting */
 
