@@ -80,13 +80,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Drop unnecessary scrollbars due to iOS Safari
-   initially obscuring some content with it's top
-   and bottom bars */
+/* Drop unnecessary scrollbars due to iOS Safari initially obscuring some
+ * content with it's top and bottom bars on pages that are 100vh tall */
 @supports(-webkit-overflow-scrolling: auto) {
-    body {
-        min-height: calc(100vh - 160px);
-    }
+  body {
+    min-height: calc(100vh - 160px);
+  }
 }
 
 @media(min-width: 450px) {
@@ -151,6 +150,7 @@ footer {
 footer a {
   color: var(--text-muted);
 }
+
 /* page header */
 
 body > header > nav {
@@ -261,6 +261,13 @@ hr {
 
 small {
   color: var(--text-muted);
+  font-size: 15px;
+}
+
+@media(min-width: 450px) {
+  small {
+    font-size: initial;
+  }
 }
 
 span.social-icons svg {
