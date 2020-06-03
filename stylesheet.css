@@ -102,7 +102,7 @@ article {
   line-height: 1.7;
 }
 
-article p, li {
+article p, article li {
   text-align: justify;
 
   -webkit-hyphens: auto;
