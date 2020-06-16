@@ -2,4 +2,5 @@
 layout: blank
 title: Everything Else
 ---
-### Page under construction
+
+### [Cookbook]({{ site.url  }}/cookbook)

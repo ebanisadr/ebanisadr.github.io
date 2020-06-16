@@ -1,0 +1,17 @@
+---
+layout: blank
+title: Cookbook
+---
+<section class='post-listing'>
+  <h1>Cookbook</h1>
+  <ul>
+    {% assign posts = site.cookbook | where: "layout", "recipe" %}
+    {% for post in posts %}
+    <li>
+      <a href='{{ post.url | prepend: site.url }}'>
+        {{ post.title }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

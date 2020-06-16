@@ -1,0 +1,49 @@
+---
+layout: blank
+---
+<h1>{{ page.title }}</h1>
+{% if page.time %}
+<small>Time: {{ page.time }}</small>
+{% endif %}
+{{ content }}
+
+<h2>Ingredients</h2>
+<ul>
+  {% for ingredient in page.ingredients %}
+  <li>{{ ingredient }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Instructions</h2>
+<ol>
+  {% for step in page.directions %}
+  <li>{{ step | markdownify }}</li>
+  {% endfor %}
+</ol>
+
+{% if page.notes %}
+<h3>Notes</h3>
+<ul>
+  {% for note in page.notes %}
+  <li>{{ note | markdownify }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if page.alternate %}
+<h3>Other ways to make this recipe</h3>
+{% for method in page.alternate %}
+<details{% if method.open %} open{% endif %}>
+  <summary>{{ method.method }}</summary>
+  {% if method.note %}
+  <p>{{ method.note | markdownify }}</p>
+  {% endif %}
+  <h3>Instructions</h3>
+  <ol>
+    {% for step in method.directions %}
+    <li>{{ step | markdownify }}</li>
+    {% endfor %}
+  </ol>
+</details>
+{% endfor %}
+{% endif %}
