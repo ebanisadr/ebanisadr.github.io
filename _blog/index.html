@@ -2,7 +2,7 @@
 layout: blank
 title: Blog
 ---
-<section class='post-listing'>
+<main class='post-listing'>
   <h1>Posts</h1>
   <ul>
     {% assign posts = site.blog | where_exp: "page", "page.title != 'Blog'" %}
@@ -14,4 +14,4 @@ title: Blog
     </li>
     {% endfor %}
   </ul>
-</section>
+</main>

@@ -28,6 +28,5 @@ alternate:
         - Pressure cook on high for 22 minutes.
         - Let stand for 10 minutes after the timer, then release the pressure,
           fluff and serve.
-published: false
 ---
 

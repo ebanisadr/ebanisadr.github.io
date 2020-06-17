@@ -128,17 +128,45 @@ main.info-card * {
   color: var(--text-main);
 }
 
-section.post-listing {
+main.post-listing {
   line-height: 1.7;
 }
-section.post-listing ul, section.post-listing li {
+main.post-listing ul, main.post-listing li {
   list-style-type: none;
   padding: 0;
 }
 
-section.post-listing a, a:hover {
+main.post-listing a, a:hover {
   color: var(--text-main);
   text-decoration-color: var(--text-muted);
+}
+
+main.sitemap h1 {
+  line-height: 1.7;
+}
+main.sitemap h3 {
+  display: inline;
+  margin-right: 5px;
+}
+
+main.sitemap h3 a:hover {
+  text-decoration: none;
+}
+
+main.sitemap a {
+  color: inherit;
+  text-decoration-color: var(--text-muted);
+}
+
+main.sitemap tbody tr:nth-child(even) {
+  background-color: initial;
+}
+
+main.sitemap tbody h3 {
+  padding-right: 0;
+}
+main.sitemap tbody tr td:first-child {
+  max-width: 100%;
 }
 
 footer {
@@ -267,6 +295,10 @@ small {
 @media(min-width: 450px) {
   small {
     font-size: initial;
+  }
+
+  main.sitemap tbody td {
+    vertical-align: initial;
   }
 }
 
