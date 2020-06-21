@@ -7,6 +7,9 @@ collections:
   cookbook:
     output: true
     permalink: /:collection/:name
+  library:
+    output: false
+    permalink: /:collection
 defaults:
   -
     scope:
@@ -14,4 +17,5 @@ defaults:
       type: "cookbook"
     values:
       layout: "recipe"
+exclude: ["add-to-library.py"]
 ---

@@ -131,6 +131,7 @@ main.info-card * {
 main.post-listing {
   line-height: 1.7;
 }
+
 main.post-listing ul, main.post-listing li {
   list-style-type: none;
   padding: 0;
@@ -165,8 +166,28 @@ main.sitemap tbody tr:nth-child(even) {
 main.sitemap tbody h3 {
   padding-right: 0;
 }
+
 main.sitemap tbody tr td:first-child {
   max-width: 100%;
+}
+
+main.library {
+  line-height: 1.7;
+}
+
+main.library ul {
+  line-height: 1.2;
+  list-style: none;
+}
+
+main.library li p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+main.library a, a:hover {
+  color: var(--text-main);
+  text-decoration-color: var(--text-muted);
 }
 
 footer {

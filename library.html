@@ -1,0 +1,17 @@
+---
+layout: blank
+title: Library
+---
+<main class='library'>
+  <h1>Library</h1>
+  <p>In no particular order, some links that I found interesting,
+  funny, or worthwhile.</p>
+  <ul>
+    {% for post in site.library reversed %}
+    <li>
+      <a href='{{ post.link }}' target='_blank' rel='noopener'>{{ post.title }}</a>
+      <small>{{ post.content }}</small>
+    </li>
+    {% endfor %}
+  </ul>
+</main>
