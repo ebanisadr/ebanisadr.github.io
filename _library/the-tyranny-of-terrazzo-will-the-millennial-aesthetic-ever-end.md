@@ -1,5 +1,5 @@
 ---
-title: The Tyranny of Terrazzo Will the millennial aesthetic ever end?
+title: "The tyranny of terrazzo - will the millennial aesthetic ever end?"
 link: https://www.thecut.com/2020/03/will-the-millennial-aesthetic-ever-end.html
 date: June 20, 2020
 ---
