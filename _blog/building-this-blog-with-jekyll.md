@@ -1,6 +1,6 @@
 ---
 layout: post
-date: May 23, 2020
+date: June 21, 2020
 title: Building this blog with Jekyll
 ---
 
@@ -56,9 +56,19 @@ site](https://github.com/ebanisadr/ebanisadr.github.io).
 
 After getting everything up and running, I realized that Google Fonts was the
 main bottleneck for my site's initial loading performance, so I decided to
-selfhost the two fonts I use too.
+selfhost the two fonts I use too. This turned out to be slightly more
+complicated than I expected, but there's a really good [guide on selfhosting
+fonts](https://www.tunetheweb.com/blog/should-you-self-host-google-fonts/) on
+_Tune The Web_. I now only have a limited glyph set, but I'm not sure it's a
+problem. I did cut about a quarter of a second off my initial load time, though.
 
 So far, I have yet to encounter any problems with this setup, but I also haven't
 started on some of the more advanced features that I might want, like tagging
 and pagination (which I understand are possible to implement with Jekyll, but
 might require me building the site locally).
+
+The full [source of this
+website](https://github.com/ebanisadr/ebanisadr.github.io) is available on
+GitHub. I still have a few things to implement, though, like SEO tagging, a
+favicon, breadcrumb links on pages, and some more posts.
+
