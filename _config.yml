@@ -10,6 +10,9 @@ collections:
   library:
     output: false
     permalink: /:collection
+  unlisted:
+    output: true
+    permalink: /:collection/:path:output_ext
 defaults:
   -
     scope:

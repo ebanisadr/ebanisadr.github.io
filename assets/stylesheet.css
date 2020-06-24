@@ -158,6 +158,7 @@ main.post-listing {
 main.post-listing ul, main.post-listing li {
   list-style-type: none;
   padding: 0;
+  padding-bottom: 5px;
 }
 
 main.post-listing a, a:hover {
