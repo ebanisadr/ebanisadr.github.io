@@ -125,6 +125,11 @@ article {
   line-height: 1.7;
 }
 
+/* TODO remove this, shouldn't be necessary */
+article a:hover {
+  color: var(--links);
+}
+
 article p, article li {
   text-align: justify;
 
