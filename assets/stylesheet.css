@@ -10,33 +10,46 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url({{ site.url }}/assets/bitter.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('{{ site.url }}/assets/bitter.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
+  font-family: 'Inter';
   font-weight: 400;
-  font-display: swap;
-  src: url({{ site.url }}/assets/work-sans.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Work Sans';
   font-style: italic;
-  font-weight: 400;
   font-display: swap;
-  src: url({{ site.url }}/assets/work-sans-italic.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('{{ site.url }}/assets/inter-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  font-style: 400;
+  font-display: swap;
+  src: url('{{ site.url }}/assets/inter.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url('{{ site.url }}/assets/inter-bold-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('{{ site.url }}/assets/inter-bold.woff2') format('woff2');
 }
 
 /* Theme variables */
 
 :root {
   --title-fonts: 'Bitter', 'Palatino Linotype', Palatino, serif;
-  --body-fonts: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  --body-fonts: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
   --mono-fonts: Monaco, Consolas, monospace;
 
   /* Variables that change with theme */
@@ -272,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-fonts);
   margin-bottom: 12px;
   color: var(--text-bright);
-  font-weight: 1000;
+  font-weight: 700;
 }
 
 h1 {
