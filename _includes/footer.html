@@ -1,4 +1,10 @@
 <footer>
   <a href='{{ site.url }}/blog/building-this-blog-with-jekyll'>See how I built this site.</a>
-  {% include social-icons.html %}
+  <span class='social-icons'>
+  {% for item in site.social-links %}
+    {% if item.footer %}
+    {% include social-icon.html platform=item.platform link=item.link %}
+    {% endif %}
+  {% endfor %}
+  </span>
 </footer>
