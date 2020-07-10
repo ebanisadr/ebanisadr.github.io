@@ -380,6 +380,11 @@ span.social-icons svg rect.fg {
   fill: var(--text-muted);
 }
 
+span.social-icons svg path.bg,
+span.social-icons svg rect.bg {
+  fill: var(--background-body);
+}
+
 a.text-icon:hover {
   color: var(--text-main);
 }
