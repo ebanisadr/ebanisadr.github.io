@@ -10,15 +10,17 @@
   {% capture text %}{% if include.text %}Enable JavaScript{% endif %}{% endcapture %}
   {% capture script %}
   <script id='deobfuscator'>
-    var start = '{{ include.link | split: '@' | first }}';
-    var end = '{{ include.link | split: '@' | last }}';
-    var text_start = '{{ include.text | split: '@' | first }}';
-    var text_end = '{{ include.text | split: '@' | last }}';
-    var text = (text_end == '') ? text_start : text_start + '@' + text_end;
-    var parent = document.getElementById('deobfuscator').parentNode;
-    parent.innerHTML = parent.innerHTML.replace('Enable JavaScript', text);
-    parent.setAttribute('href', start + '@' + end);
-    document.getElementById('deobfuscator').outerHTML = "";
+    (() => {
+      let start = '{{ include.link | split: '@' | first }}';
+      let end = '{{ include.link | split: '@' | last }}';
+      let text_start = '{{ include.text | split: '@' | first }}';
+      let text_end = '{{ include.text | split: '@' | last }}';
+      let text = (text_end == '') ? text_start : text_start + '@' + text_end;
+      let parent = document.getElementById('deobfuscator').parentNode;
+      parent.innerHTML = parent.innerHTML.replace('Enable JavaScript', text);
+      parent.setAttribute('href', start + '@' + end);
+      document.getElementById('deobfuscator').outerHTML = "";
+    })();
   </script>
   {% endcapture %}
   {% assign link='address hidden, use javascript' %}
