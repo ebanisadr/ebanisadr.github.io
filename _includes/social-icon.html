@@ -1,0 +1,33 @@
+{% if include.title %}
+  {% capture alt %}{{ include.title }}{% endcapture %}
+{% else %}
+  {% capture alt %}Eric Banisadr on {{ include.platform }}{% endcapture %}
+{% endif %} {% unless include.platform == 'Email' %}
+  {% capture link %}{{ include.link }}{% endcapture %}
+  {% capture text %}{{ include.text }}{% endcapture %}
+  {% assign script='' %}
+{% else %}
+  {% comment %} Hide email links {% endcomment %}
+  {% capture text %}{% if include.text %}Enable JavaScript{% endif %}{% endcapture %}
+  {% capture script %}
+  <script id='deobfuscator'>
+    (() => {
+      let start = '{{ include.link | split: '@' | first }}';
+      let end = '{{ include.link | split: '@' | last }}';
+      let text_start = '{{ include.text | split: '@' | first }}';
+      let text_end = '{{ include.text | split: '@' | last }}';
+      let text = (text_end == '') ? text_start : text_start + '@' + text_end;
+      let parent = document.getElementById('deobfuscator').parentNode;
+      parent.innerHTML = parent.innerHTML.replace('Enable JavaScript', text);
+      parent.setAttribute('href', start + '@' + end);
+      document.getElementById('deobfuscator').outerHTML = "";
+    })();
+  </script>
+  {% endcapture %}
+  {% assign link='address hidden, use javascript' %}
+{% endunless %} {% if text != '' %}
+  {% assign class=" class='text-icon'" %}
+{% endif %} {% comment %} Necessary to remove trailing newline from svg file {% endcomment %} {% capture icon %}
+{%- include {{ include.platform | downcase | prepend: 'icons/' | append: '.svg' }} -%}
+{% endcapture %} <a title='{{ alt }}' href='{{ link }}'{{ class }}{% unless include.platform == 'Email' %} target='_blank' rel='noopener'{% endunless %}>
+  {{- icon | rstrip -}}{{- text | strip -}}{{- script -}}</a>

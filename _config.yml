@@ -1,5 +1,12 @@
 ---
 url: 'https://ericbanisadr.com'
+social-links:
+  - { platform: 'GitHub', link: 'https://www.github.com/ebanisadr', footer: true }
+  - { platform: 'Medium', link: 'https://medium.com/@ebanisadr', footer: true }
+  - { platform: 'Twitter', link: 'https://twitter.com/ebanisadr', footer: true }
+  - { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/ebanisadr/', footer: true }
+  - { platform: 'Email', link: 'mailto:ebani@cs.washington.edu', title: 'Email me', footer: true }
+  - { platform: 'Instagram', link: 'https://www.instagram.com/ericbanisadr/' }
 collections:
   blog:
     output: true

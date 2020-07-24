@@ -13,7 +13,11 @@
       <img src='{{ site.url }}/headshot.jpg' width='266px' height='266px' alt='My headshot' />
       <h1>Eric Banisadr</h1>
       <p>Computer Science student at UW</p>
-      {% include social-icons.html %}
+      <span class='large-icons'>
+      {% for item in site.social-links %}
+        {%- include social-icon.html platform=item.platform link=item.link title=item.title -%}
+      {% endfor %}
+      </span>
     </main>
     {% include analytics.html %}
   </body>
