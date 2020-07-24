@@ -10,33 +10,46 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url({{ site.url }}/assets/bitter.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('{{ site.url }}/fonts/bitter.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
+  font-family: 'Inter';
   font-weight: 400;
-  font-display: swap;
-  src: url({{ site.url }}/assets/work-sans.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Work Sans';
   font-style: italic;
-  font-weight: 400;
   font-display: swap;
-  src: url({{ site.url }}/assets/work-sans-italic.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('{{ site.url }}/fonts/inter-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  font-style: 400;
+  font-display: swap;
+  src: url('{{ site.url }}/fonts/inter.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url('{{ site.url }}/fonts/inter-bold-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('{{ site.url }}/fonts/inter-bold.woff2') format('woff2');
 }
 
 /* Theme variables */
 
 :root {
   --title-fonts: 'Bitter', 'Palatino Linotype', Palatino, serif;
-  --body-fonts: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  --body-fonts: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
   --mono-fonts: Monaco, Consolas, monospace;
 
   /* Variables that change with theme */
@@ -160,13 +173,15 @@ main.post-listing {
   line-height: 1.7;
 }
 
-main.post-listing ul, main.post-listing li {
+main.post-listing ul,
+main.post-listing li {
   list-style-type: none;
   padding: 0;
   padding-bottom: 5px;
 }
 
-main.post-listing a, a:hover {
+main.post-listing a,
+main.post-listing a:hover {
   color: var(--text-main);
   text-decoration-color: var(--text-muted);
 }
@@ -214,7 +229,8 @@ main.library li p {
   margin-bottom: 20px;
 }
 
-main.library a, a:hover {
+main.library a,
+main.library a:hover {
   color: var(--text-main);
   text-decoration-color: var(--text-muted);
 }
@@ -272,7 +288,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-fonts);
   margin-bottom: 12px;
   color: var(--text-bright);
-  font-weight: 1000;
+  font-weight: 700;
 }
 
 h1 {
@@ -353,11 +369,38 @@ small {
 }
 
 span.social-icons svg {
-  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  padding-right: 2px;
+  vertical-align: middle;
 }
 
-span.social-icons svg path {
+span.social-icons svg path.fg,
+span.social-icons svg rect.fg {
   fill: var(--text-muted);
+}
+
+span.social-icons svg path.bg,
+span.social-icons svg rect.bg {
+  fill: var(--background-body);
+}
+
+a.text-icon:hover {
+  color: var(--text-main);
+}
+
+a.text-icon:hover path {
+  fill: var(--text-main);
+}
+
+span.large-icons svg {
+  width: 30px;
+  height: 30px;
+
+}
+
+span.large-icons a:hover {
+  fill: initial;
 }
 
 /* Tables */

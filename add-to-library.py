@@ -13,7 +13,7 @@ date = datetime.date.today().strftime("%B %d, %Y")
 filename = '_library/'+ slug + '.md'
 post = open(filename, 'a')
 content = '''---
-title: %s
+title: "%s"
 link: %s
 date: %s
 ---

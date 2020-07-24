@@ -94,6 +94,11 @@
   // Get URL to send to GoatCounter.
   window.goatcounter.url = function(vars) {
     var data = get_data(vars || {})
+
+    // Changed to strip ?ref=campaign from the url if it's the only query parameter
+    if (data.q && /\?ref=[^&]*$/.test(data.q))
+      history.replaceState(undefined, undefined, data.p.replace(data.q, ''))
+
     if (data.p === null)  // null from user callback.
       return
     data.rnd = Math.random().toString(36).substr(2, 5)  // Browsers don't always listen to Cache-Control.
