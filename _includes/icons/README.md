@@ -4,7 +4,7 @@ published: false
 
 Icons used here are from a variety of sources.
 
-- `email.svg` and `web.svg` come from
+- `email.svg`, `web.svg`, and `pdf.svg` come from
   [IcoMoon-Free](https://github.com/Keyamoon/IcoMoon-Free) and are used under
   the GNU GPLv3. I minified them and added some css classes.
 - `github.svg` is modified from the one on the GitHub website.

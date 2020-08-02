@@ -15,7 +15,7 @@
       <p>Computer Science student at UW</p>
       <span class='large-icons'>
       {% for item in site.social-links %}
-        {% include social-icon.html platform=item.platform link=item.link %}
+        {%- include social-icon.html platform=item.platform link=item.link title=item.title -%}
       {% endfor %}
       </span>
     </main>

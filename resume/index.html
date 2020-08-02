@@ -1,0 +1,173 @@
+---
+me: Eric Banisadr
+tagline: Junior studying computer science at the University of Washington
+links:
+  - { platform: 'Email', link: 'mailto:ebani@cs.washington.edu', title: 'Email me', text: 'ebani@cs.washington.edu' }
+  - { platform: 'Web', link: 'https://ericbanisadr.com?ref=resume-web', title: 'My website', text: 'ericbanisadr.com' }
+  - { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/ebanisadr/', text: 'linkedin.com/in/ebanisadr' }
+  - { platform: 'GitHub', link: 'https://www.github.com/ebanisadr', text: 'github.com/ebanisadr'}
+about:
+  - I'm a passionate programmer with a focus on product excellence. I'm quick
+    and eager to learn and have experience in a variety of fields to back it up.
+    I have excellent communication skills and believe working collaboratively
+    is essential to good software development.
+experience:
+  - company: AtomBeam
+    link: https://atombeamtech.com
+    title: Software development intern
+    shortdate: Current job
+    longdate: July 2020 - Present
+    bullets:
+      - Complete software development tasks to optimize data-transfer software
+      - Employ effective organization and communication skills to work remotely
+        for a small startup
+  - company: LightRiver Technologies
+    link: https://lightriver.com
+    title: Summer intern
+    shortdate: Summer 2019
+    longdate: June 2019 - August 2019
+    bullets:
+      - Configured, tested and deployed fiber optic networking equipment with a
+        team of engineers for clients nationwide
+      - Developed internal configuration scripts to automate the provisioning
+        of equipment for customers
+  - company: Top Tutoring
+    link: https://toptutoring.com/
+    title: Software Development Intern
+    shortdate: Summer 2017
+    longdate: July 2017 - September 2017
+    bullets:
+      - Wrote Ruby code to implement new features on the front and back end of
+        an online tutoring webapp
+      - Contributed code using industry-standard best practices including Git
+        version control, code reviews, and Kanban-style task management
+  - company: Round Table Pizza, Moraga, CA
+    link: https://www.roundtablepizzamoraga.com
+    title: Employee
+    shortdate: 2016
+    longdate: April 2016 – September 2016
+    bullets:
+      - Used customer service, food prep, and communication skills to perform
+        restaurant duties
+education:
+  - school: University of Washington
+    shortdate: 2018 - present
+    description:
+      Computer science major expecting to graduate spring 2022, relevant
+      coursework includes data structures/parallelism, hardware basics, and
+      advanced math through linear algebra.
+technologies:
+  - I have extensive experience with writing code in JavaScript and Java and I
+    am familiar with best practices for code testing, version control, code
+    reviews, MVC architectures, and Agile development. I'm always open to
+    learning new technologies and development processes.
+projects:
+  - name: ericbanisadr.com
+    function: My blog
+    link: https://ericbanisadr.com?ref=resume-web-project
+    description:
+      Built a statically generated site in vanilla HTML and CSS, using
+      [Jekyll](https://jekyllrb.com){:target='_blank' :rel='noopener'} and the mobile-first principle, with
+      emphasis on fast loading times and search engine optimization.
+service:
+  - organization: Washington Yacht Club
+    link: http://www.washingtonyachtclub.org
+    title: Database consultant
+    shortdate: Since 2018
+    longdate: July 2020 - Present
+    description:
+      Ongoing manintence and support for our club's memebership database,
+      including upgrading MySQL/PHP verisons and user support.  Responsible for
+      proposing and implementing new features as needed by the club.
+---
+<head>
+  <link rel='preload' href='{{ site.url }}/fonts/inter.woff2' as='font' crossorigin>
+  <link rel='preload' href='{{ site.url }}/fonts/inter-italic.woff2' as='font' crossorigin>
+  <link rel='preload' href='{{ site.url }}/fonts/inter-bold.woff2' as='font' crossorigin>
+  <link id='stylesheet' rel='stylesheet' href='{{ site.url }}/resume/resume.css' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <meta name="robots" content="noarchive" />
+  <title>Resume | {{ page.me }}</title>
+</head>
+<body>
+  <div id='pdf-link'>
+    {%- include social-icon.html platform='pdf' link='Eric%20Banisadr%20-%20Resume.pdf' text='One-page PDF version' title='One-page PDF version' -%}
+  </div>
+  <main>
+    <header class='columns'>
+      <section class='left'>
+        <h1>{{ page.me }}</h1>
+        {{ page.tagline | markdownify }}
+      </section>
+      <section id='links' class='right'>
+        <ul class='social-links'>
+          {% for item in page.links %} <li>
+            {%- include social-icon.html platform=item.platform link=item.link text=item.text title=item.title -%}
+          </li> {% endfor %}
+        </ul>
+      </section>
+    </header>
+    <div id='main' class='columns'>
+      <section id='about' class='right'>
+
+        <h2>About</h2>
+        {% for item in page.about %}
+          {{ item | markdownify }}
+        {% endfor %}
+
+        <h2>Education</h2>
+        {% for school in page.education %}
+          <h3>{{ school.school }}</h3>
+          <item-date>{{ school.shortdate | replace: " ", "&nbsp;" | replace: "-", "&ndash;"}}</item-date>
+          {{ school.description | markdownify }}
+        {% endfor %}
+
+        <h2>Technologies</h2>
+        {% for item in page.technologies %}
+          {{ item | markdownify }}
+        {% endfor %}
+      </section>
+
+      <section class='experience left'>
+        <h2>Experience</h2>
+        {% for job in page.experience %}
+        <span class='item-header'>
+          <h3><a href='{{ job.link }}' target='_blank' rel='noopener'>{{ job.company }}</a></h3>
+          <span class='item-info'>
+            <job-title>{{ job.title }}</job-title>
+            <item-date>{{ job.shortdate | replace: " ", "&nbsp;" }}</item-date>
+            <long-date>{{ job.longdate | replace: "-", "&ndash;" }}</long-date>
+          </span>
+        </span>
+        <ul>
+          {% for item in job.bullets %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+
+        <h2 id='projects'>Projects</h2>
+        {% for project in page.projects %}
+        <span class='item-header'>
+          <h3><a href='{{ project.link }}' target='_blank' rel='noopener'>{{ project.name }}</a></h3>
+          {{ project.function | markdownify }}
+        </span>
+        {{ project.description | markdownify }}
+        {% endfor %}
+
+        <h2>Service</h2>
+        {% for item in page.service %}
+        <span class='item-header'>
+          <h3><a href='{{ item.link }}' target='_blank' rel='noopener'>{{ item.organization }}</a></h3>
+          <span class='item-info'>
+            <job-title>{{ item.title }}</job-title>
+            <item-date>{{ item.shortdate | replace: " ", "&nbsp;" }}</item-date>
+            <long-date>{{ item.longdate | replace: "-", "&ndash;" }}</long-date>
+          </span>
+        </span>
+        {{ item.description | markdownify }}
+        {% endfor %}
+      </section>
+    </div>
+  </main>
+</body>
