@@ -7,6 +7,7 @@ social-links:
   - { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/ebanisadr/', footer: true }
   - { platform: 'Email', link: 'mailto:ebani@cs.washington.edu', title: 'Email me', footer: true }
   - { platform: 'Instagram', link: 'https://www.instagram.com/ericbanisadr/' }
+  - { platform: 'Lobsters', link: 'https://lobste.rs/u/eban' }
 collections:
   blog:
     output: true
