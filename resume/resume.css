@@ -252,8 +252,17 @@ job-title:after {
   }
 
   long-date {
-    opacity: 0.75;
+    opacity: 0.7;
     top: -0.9rem;
+    font-size: 0.7rem;
+  }
+
+  job-title:after {
+    content: none;
+  }
+
+  item-date {
+    display: none;
   }
 
   #pdf-link {
