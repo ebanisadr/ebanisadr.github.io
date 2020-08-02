@@ -1,6 +1,7 @@
 ---
 layout: post
 date: June 21, 2020
+updated: August 2, 2020
 title: Building this blog with Jekyll
 ---
 
@@ -54,27 +55,38 @@ GitHub pages to host this site super easily. I don't even have to build it
 locally, just push to the `master` branch of [the repository for this
 site](https://github.com/ebanisadr/ebanisadr.github.io).
 
-After getting everything up and running, I realized that Google Fonts was the
-main bottleneck for my site's initial loading performance, so I decided to
-selfhost the two fonts I use too. This turned out to be slightly more
-complicated than I expected, but there's a really good [guide on selfhosting
+To abide by copyright laws, I chose the fonts for my site from [Google
+Fonts](https://fonts.google.com)' collection of Open Font License fonts, and
+used their plug-and-play hosted option. I liked fonts
+[Bitter](https://www.huertatipografica.com/en/fonts/bitter-ht) and
+[Inter](https://rsms.me/inter/) (I actually  liked Bitter so much when I first
+saw it I decided to update my website just so I could use it).
+
+After getting everything up and running, I realized that Google Fonts was the main bottleneck for my site's
+initial loading performance, so I decided to selfhost the two fonts I use too.
+This turned out to be slightly more complicated than I expected, but there's a
+really good [guide on selfhosting
 fonts](https://www.tunetheweb.com/blog/should-you-self-host-google-fonts/) on
-_Tune The Web_. After deciding I wanted to use [Inter](https://rsms.me/inter/)
-for this site's body, I got suckered in to the alternate numbers (with a flat
-upper line on the 3 instead of a curly one). I only wanted that option, so I
-tried to use FontSquirrel's webfont generator to flatten it into the main font,
-but that feature seemed broken when I tried it.  I ended up editing the font
+_Tune The Web_.
+
+I'd also gotten suckered in to Inter's alternate numbers (with a flat upper line
+on the 3 instead of a curly one). I only needed one set of numbers, so I tried
+to use FontSquirrel's webfont generator to flatten it into the main font, but
+that feature seemed broken when I tried it. I ended up editing the font
 myself using [FontForge](https://fontforge.org/en-US/) and using the [FontTools
 Python Library](https://github.com/fonttools/fonttools) to subset the modified
 font with the Unicode range Google fonts uses for Latin: `U+0000-00FF, U+0131,
 U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
 U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`. Then I used
 [Transfonter](https://transfonter.org) to generate the CSS `@font-face` rules to
-make everything work together. Finally, I added [preload
+make everything work together.
+
+Once I had the minified font files and their corresponding CSS rules, I added
+the rules to my stylesheet and [preload
 links](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) to
-the fonts that are used on the index page in the HTML head. Now I only have a
-limited glyph set, but I'm not sure it's a problem. I did cut about a quarter of
-a second off my initial load time, though.
+HTML head of my pages. Now I only have a limited glyph set, but I'm not sure
+it's a problem. I did cut about a quarter of a second off my initial load time,
+though.
 
 
 So far, I have yet to encounter any problems with this setup, but I also haven't
