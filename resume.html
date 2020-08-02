@@ -117,8 +117,10 @@ service:
 
         <h2>Education</h2>
         {% for school in page.education %}
-          <h3>{{ school.school }}</h3>
-          <item-date>{{ school.shortdate | replace: " ", "&nbsp;" | replace: "-", "&ndash;"}}</item-date>
+          <span class='item-header'>
+            <h3>{{ school.school }}</h3>
+            <p>{{ school.shortdate | replace: " ", "&nbsp;" | replace: "-", "&ndash;"}}</p>
+          </span>
           {{ school.description | markdownify }}
         {% endfor %}
 
