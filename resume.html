@@ -1,26 +1,39 @@
 ---
 me: Eric Banisadr
-tagline: Junior studying computer science at the University of Washington
+tagline: Passionate programmer with a focus on product excellence
 links:
   - { platform: 'Email', link: 'mailto:ebani@cs.washington.edu', title: 'Email me', text: 'ebani@cs.washington.edu' }
   - { platform: 'Web', link: 'https://ericbanisadr.com?ref=resume-web', title: 'My website', text: 'ericbanisadr.com' }
   - { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/ebanisadr/', text: 'linkedin.com/in/ebanisadr' }
   - { platform: 'GitHub', link: 'https://www.github.com/ebanisadr', text: 'github.com/ebanisadr'}
 about:
-  - I'm a passionate programmer with a focus on product excellence. I'm quick
-    and eager to learn and have experience in a variety of fields to back it up.
-    I have excellent communication skills and believe working collaboratively
-    is essential to good software development.
+  - I believe it's important to always be growing and improving both
+    technically and as a communicator.  I'm an avid reader of technical blogs
+    and I'm quick and eager to learn. I have excellent communication skills and
+    believe working collaboratively is essential to good software development.
 experience:
-  - company: AtomBeam
-    link: https://atombeamtech.com
-    title: Software development intern
+  - company: Lyft
+    link: https://www.lyft.com
+    title: Software engineer
     shortdate: Current job
-    longdate: July 2020 - Present
+    longdate: August 2022 - Present
     bullets:
-      - Complete software development tasks to optimize data-transfer software
-      - Employ effective organization and communication skills to work remotely
-        for a small startup
+      - Part of the dispatch infrastructure team, detailed description
+        forthcoming
+  - company: Lyft
+    link: https://www.lyft.com
+    title: Software engineer intern
+    shortdate: Summer 2021
+    longdate: June 2021 - September 2021
+    bullets:
+      - Lead research, design, and implementation of a new,
+        [Homebrew](https://brew.sh){:target="_blank"}-based platform for
+        distributing development tools and software to 3,500+ engineers
+        internally
+      - Contributed Python and Ruby code, provisioned
+        infrastructure, wrote high-quality design and technical documentation
+      - Successful knowledge transfer led to smooth rollout after a blockage
+        waiting for artifact storage service, platform still in use
   - company: LightRiver Technologies
     link: https://lightriver.com
     title: Engineering intern
@@ -31,35 +44,18 @@ experience:
         team of engineers for clients nationwide
       - Developed internal configuration scripts to automate the provisioning
         of equipment for large corporate customers
-  - company: Top Tutoring
-    link: https://toptutoring.com/
-    title: Software development intern
-    shortdate: Summer 2017
-    longdate: July 2017 - September 2017
-    bullets:
-      - Wrote Ruby code to implement new features on the front and back end of
-        an online tutoring webapp
-      - Contributed code using industry-standard best practices including Git
-        version control, code reviews, and Kanban-style task management
-  - company: Round Table Pizza
-    link: https://www.roundtablepizzamoraga.com
-    title: Crew member (Moraga, CA)
-    shortdate: 2016
-    longdate: April 2016 – September 2016
-    bullets:
-      - Used customer service, food prep, and communication skills to perform
-        restaurant duties
 education:
   - school: University of Washington
-    shortdate: 2018 - present
+    shortdate: 2018 - 2022
     description:
-      Computer science student in the class of 2022. Relevant coursework
-      includes data structures/parallelism, hardware basics, databases, and
-      advanced math through linear algebra. Dean's list recognition each year.
+      Bachelor of Science degree in Computer Science received June 2022.
+      <br>
+      Relevant coursework included data structures and parallelism, hardware
+      basics, databases, and advanced math including linear and modern algebra.
 technologies:
-  - I have extensive experience writing code in JavaScript and Java and I
-    am familiar with best practices for code testing, version control, code
-    reviews, MVC architectures, and Agile development. I'm always open to
+  - I have extensive experience writing code in JavaScript, Java, and Python
+    and I am familiar with best practices for code testing, version control,
+    code reviews, MVC architectures, and Agile development. I'm always open to
     learning new technologies and development processes.
 projects:
   - name: ericbanisadr.com
@@ -143,7 +139,7 @@ service:
         </span>
         <ul>
           {% for item in job.bullets %}
-          <li>{{ item }}</li>
+          <li>{{ item | markdownify }}</li>
           {% endfor %}
         </ul>
         {% endfor %}

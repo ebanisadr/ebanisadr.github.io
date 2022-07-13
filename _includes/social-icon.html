@@ -3,7 +3,7 @@
 {% else %}
   {% capture alt %}Eric Banisadr on {{ include.platform }}{% endcapture %}
 {% endif %} {% unless include.platform == 'Email' %}
-  {% capture link %}{{ include.link | replace: 'https://ericbanisadr.com', site.url }}{% endcapture %}
+  {% capture link %}{{ include.link }}{% endcapture %}
   {% capture text %}{{ include.text }}{% endcapture %}
   {% assign script='' %}
 {% else %}
