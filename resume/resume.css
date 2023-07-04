@@ -111,6 +111,10 @@ h3 {
   margin: 0;
 }
 
+ul {
+  padding-left: 30px;
+}
+
 .item-header {
   display: flex;
   flex-wrap: wrap;
@@ -226,7 +230,7 @@ job-title:after {
   }
 
   body {
-    font-size: 11pt;
+    font-size: 10pt;
     margin: 0;
     padding: 0;
   }

@@ -7,26 +7,33 @@ links:
   - { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/ebanisadr/', text: 'linkedin.com/in/ebanisadr' }
   - { platform: 'GitHub', link: 'https://www.github.com/ebanisadr', text: 'github.com/ebanisadr'}
 about:
-  - I believe it's important to always be growing and improving both
-    technically and as a communicator.  I'm an avid reader of technical blogs
-    and I'm quick and eager to learn. I have excellent communication skills and
-    believe working collaboratively is essential to good software development.
+  - I believe it's important to always be growing both technically and as a
+    communicator. I'm an avid reader of technical blogs and I'm quick and
+    eager to learn. I have excellent communication skills and believe working
+    collaboratively is essential to good software development.
 experience:
   - company: Lyft
     link: https://www.lyft.com
-    title: Software engineer
+    title: Software engineer, Core services team
     shortdate: Current job
     longdate: August 2022 - Present
     bullets:
-      - Part of the dispatch infrastructure team, detailed description
-        forthcoming
+      - Owner of the ride state machine, a highly-reliable, fault-tolerant and
+        self-healing distributed system that undergirds the successful
+        fulfillment of all Lyft rides, from passenger request to invoicing
+      - Developed the backend for new driver control features that give drivers
+        the option to disable previously-mandatory ride swaps
+      - Led tech debt reduction migrations of the driver accept and
+        airport-specific assignment endpoints, safely replacing thousands of
+        lines of legacy Python with concurrent, idiomatic and readable Python
+        and Golang
   - company: Lyft
     link: https://www.lyft.com
     title: Software engineer intern
     shortdate: Summer 2021
     longdate: June 2021 - September 2021
     bullets:
-      - Lead research, design, and implementation of a new,
+      - Led research, design, and implementation of a new,
         [Homebrew](https://brew.sh){:target="_blank"}-based platform for
         distributing development tools and software to 3,500+ engineers
         internally
@@ -53,10 +60,13 @@ education:
       Relevant coursework included data structures and parallelism, hardware
       basics, databases, and advanced math including linear and modern algebra.
 technologies:
-  - I have extensive experience writing code in JavaScript, Java, and Python
-    and I am familiar with best practices for code testing, version control,
-    code reviews, MVC architectures, and Agile development. I'm always open to
-    learning new technologies and development processes.
+  - >
+    Lyft's stack: Python and Golang microservices with CI/CD, Kubernetes
+    orchestration, DynamoDB data repos, Protobuf serialization.
+  - I also have extensive experience working in JavaScript, and Java, and I am
+    familiar with best practices for testing, version control, code reviews,
+    MVC architectures, and Agile development. I'm always open to learning new
+    technologies and development processes.
 projects:
   - name: ericbanisadr.com
     function: My blog
