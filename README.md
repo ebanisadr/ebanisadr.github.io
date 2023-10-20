@@ -11,7 +11,7 @@ Otherwise, this repo is mostly just me.
 I first made this website with the idea that using mostly  basic HTML/CSS would
 prove durable and more maintainable than trying to keep pace with the frontend
 flavor of the month. This has certainly proved true with a major caveat: I wish
-I had used CSS closer to its original design: cascading from less specific
+I had used CSS closer to its original design; cascading from less specific
 stylesheets to more specific ones.
 
 Part of the problem was the fact that making something new is a fundamentally
@@ -22,7 +22,7 @@ perfectly to avoid second-order effects of changes, but doesn't make
 maintenance easy.
 
 As I start to become more active in updating this site, I'd like to move toward
-a more ✨_cascading_✨ approach, where ideas bubble into the top-level
+a more _✨cascading✨_ approach, where ideas bubble into the top-level
 stylesheet.  The vision is that, when I'm making a new page, I can use a
 `<style>` tag, possibly in combination with an element type and class name, to
 style things for that particular piece of content. Once I find myself wanting to
