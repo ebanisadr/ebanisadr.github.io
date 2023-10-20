@@ -5,6 +5,16 @@
   <head>
     {% include head.html %}
     <title>Eric Banisadr</title>
+    <style>
+      .caption {
+        text-align: center;
+        max-width: 80%;
+      }
+
+      @media(min-width: 450px) {
+        max-width: 100%;
+      }
+    </style>
   </head>
 
   <body>
@@ -12,7 +22,7 @@
     <main class='info-card'>
       <img src='{{ site.url }}/headshot.jpg' width='266px' height='266px' alt='My headshot' />
       <h1>Eric Banisadr</h1>
-      <p>Computer Science student at UW</p>
+      <p class='caption'>NYC based, software focused and, soon, a bit of a blogger</p>
       <span class='large-icons'>
       {% for item in site.social-links %}
         {%- include social-icon.html platform=item.platform link=item.link title=item.title -%}
