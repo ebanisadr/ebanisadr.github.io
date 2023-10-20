@@ -1,9 +1,10 @@
 <footer>
-  <a href='{{ site.url }}/everything-else'>See how I built this site.</a>
+  {% assign latest_post = site.blog | last %}
+  <a href='{{ latest_post.url | prepend: site.url }}'>Latest post on {{ latest_post.date | date_to_string: "ordinal", "US" }}: {% if latest_post.category %}{{latest_post.category}}—{% endif %}{{ latest_post.title }}</a>
   <span class='social-icons'>
   {% for item in site.social-links %}
     {% if item.footer %}
-    {% include social-icon.html platform=item.platform link=item.link %}
+    {% include social-icon.html platform=item.platform link=item.link title=item.title %}
     {% endif %}
   {% endfor %}
   </span>

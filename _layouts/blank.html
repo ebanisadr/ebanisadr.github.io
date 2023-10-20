@@ -3,6 +3,9 @@
   <head>
     {% include head.html %}
     <title>{% if page.title %}{{ page.title }} | {% endif %}Eric Banisadr</title>
+    {% if page.styles %}<style>
+{{ page.styles }}
+    </style>{% endif %}
   </head>
 
   <body>

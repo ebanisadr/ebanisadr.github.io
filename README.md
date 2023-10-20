@@ -37,8 +37,16 @@ Thanks to modern web inspectors, I'm imagining a workflow like:
 1. Write it as HTML (or Markdown when possible)
 1. Render it and see what happens
 1. Fix it using a `<style>` element and semantic class names
-1. Run `rg <classname>` and see if I can standardize
+1. Run `rg <classname>` or `rg <property>` and see if I can standardize
 
 Further, I hope to continue using hyphenated custom elements as pseudo
-components, keeping their CSS and inner HTML structure in sync due to the copy-paste
-bent inherent in the idea of components.
+components, keeping their CSS and inner HTML structure in sync due to the
+copy-paste bent inherent in the idea of components.
+
+### Guide to my templates
+
+All pages may specify `styles` which will be added to a `<style>` tag in the
+page `<head>`.
+
+Posts have a `date` and optionally `updated` and `category`. Updated is rendered
+after the date, and category is rendered inline after the title in smaller text.

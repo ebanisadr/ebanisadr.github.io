@@ -53,6 +53,7 @@
   --mono-fonts: Monaco, Consolas, monospace;
 
   /* Variables that change with theme */
+  /* --background body is also inlined into the theme color meta tags */
   --background-body: #f2f2f2;
   --background: #e0e0e0;
   --background-alt: #e6e6e6;
@@ -144,12 +145,6 @@ article a:hover {
 }
 
 article p, article li {
-  text-align: justify;
-
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-
   word-wrap: break-word;
 }
 
@@ -167,23 +162,6 @@ main.info-card img {
 main.info-card * {
   margin: 0.5em 0 0 0;
   color: var(--text-main);
-}
-
-main.post-listing {
-  line-height: 1.7;
-}
-
-main.post-listing ul,
-main.post-listing li {
-  list-style-type: none;
-  padding: 0;
-  padding-bottom: 5px;
-}
-
-main.post-listing a,
-main.post-listing a:hover {
-  color: var(--text-main);
-  text-decoration-color: var(--text-muted);
 }
 
 main.sitemap h1 {
@@ -279,8 +257,36 @@ body > footer {
   flex-flow: inline wrap;
   justify-content: space-between;
 
-  border-top: 1px solid var(--background);
+  border-top: 1px solid var(--background-alt);
 }
+
+footer > span.social-icons {
+  display: block;
+  text-align: right;
+  text-wrap: balance;
+}
+
+footer span.social-icons svg {
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  vertical-align: middle;
+}
+
+footer .social-icons svg path.fg,
+footer .social-icons svg rect.fg {
+  fill: var(--text-muted);
+}
+
+footer .social-icons svg path.bg,
+footer .social-icons svg rect.bg {
+  fill: var(--background-body);
+}
+
+footer a:hover path.fg {
+  fill: var(--text-main);
+}
+
 
 /* headings and bold */
 
@@ -366,31 +372,6 @@ small {
   main.sitemap tbody td {
     vertical-align: initial;
   }
-}
-
-span.social-icons svg {
-  width: 20px;
-  height: 20px;
-  padding-right: 2px;
-  vertical-align: middle;
-}
-
-span.social-icons svg path.fg,
-span.social-icons svg rect.fg {
-  fill: var(--text-muted);
-}
-
-span.social-icons svg path.bg,
-span.social-icons svg rect.bg {
-  fill: var(--background-body);
-}
-
-a.text-icon:hover {
-  color: var(--text-main);
-}
-
-a.text-icon:hover path {
-  fill: var(--text-main);
 }
 
 span.large-icons svg {

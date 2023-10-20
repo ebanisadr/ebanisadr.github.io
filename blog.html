@@ -1,0 +1,38 @@
+---
+layout: blank
+title: Blog
+styles: |-
+  main {
+    padding-top: 40px;
+    line-height: 1.7;
+  }
+  main a,
+  main a:hover {
+    color: var(--text-main);
+    text-decoration-color: var(--text-muted);
+  }
+  main h1 {
+    margin-top: initial;
+    font-size: 1.5em;
+  }
+  main ul, main li {
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 8px;
+  }
+---
+<main>
+  <p>I like to read about everything and I hope to write about everything too.</p>
+  <h1>Posts</h1>
+  <ul>
+    {% assign posts = site.blog | where_exp: "page", "page.title != 'Blog'" %}
+    {% for post in posts reversed %}
+    <li>
+      <a href='{{ post.url | prepend: site.url }}'>
+        {% if post.category %}{{ post.category }}: {% endif %}{{ post.title }} <small>{{ post.date | date_to_long_string: "ordinal", "US" }}</small>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</main>
+</main>
