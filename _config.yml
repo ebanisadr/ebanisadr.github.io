@@ -28,5 +28,5 @@ defaults:
       type: "cookbook"
     values:
       layout: "recipe"
-exclude: ["add-to-library.py"]
+exclude: ["add-to-library.py", "README.md"]
 ---
