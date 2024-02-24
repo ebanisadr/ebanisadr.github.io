@@ -596,7 +596,7 @@ code .strong {
   }
 
 
-  footer > * {
+  footer * {
     display: none;
   }
 
