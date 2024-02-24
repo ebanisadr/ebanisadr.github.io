@@ -597,7 +597,7 @@ code .strong {
 
 
   footer > * {
-    visibility: hidden;
+    display: none;
   }
 
   footer:before {
