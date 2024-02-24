@@ -382,6 +382,7 @@ span.large-icons svg {
 
 span.large-icons a:hover {
   fill: initial;
+  text-decoration: none;
 }
 
 /* Tables */
