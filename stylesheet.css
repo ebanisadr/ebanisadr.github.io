@@ -385,6 +385,15 @@ span.large-icons a:hover {
   text-decoration: none;
 }
 
+figcaption {
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+
 /* Tables */
 
 table {
