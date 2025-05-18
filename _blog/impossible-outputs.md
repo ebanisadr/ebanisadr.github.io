@@ -17,7 +17,7 @@ Well-written prompts allow us to extract more information from GPT+MCP than is e
 I'm not equipped with the analytical tools to rigorously quantify exactly how many bits or "ideas" worth of non-input information are contained in a given response, but I *can* identify a first principle at play here: more is better. We want chatbots to provide us with information we don't already have.
 
 <figure>
-<img src="{{site.url}}/blog/impossible-outputs/ai-value.png" alt="user value = log(output information / user-input information)" style="max-width: 540px; border-radius: 1em; object-fit: scale-down;" />
+<img src="{{site.url}}/blog/impossible-outputs/ai-value.png" alt="user value = log(output information / user-input information)" style="max-width: min(99%, 540px); border-radius: 1em; object-fit: scale-down;" />
 <figcaption>The utility of AI can be measured simply</figcaption>
 </figure>
 
