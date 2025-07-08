@@ -43,7 +43,7 @@ script: |-
   })();
 ---
 
-### Groceries
+## Groceries
 
 bakery
  - [ ] crusty bread 🥖 😋 (i liked wfm ancient grains one)
@@ -66,7 +66,7 @@ groceries
 - [ ] EVOO, salt, pepper
 - [ ] clam juice or seafood stock (can sub water)
 
-### Instructions -- crockpot
+## Instructions -- crockpot
 
 Dice these
  - [ ] 1 med onion
@@ -97,7 +97,9 @@ Toast bread
 
 Add clams just before serving, (pull bay leaf), garnish with celery leaves, lemon wedge
 
+<br />
 <hr/>
+<br />
 
 Makes about half a crockpot (can be doubled). Easy, tasty, decent food. Very high bang for buck.
 
