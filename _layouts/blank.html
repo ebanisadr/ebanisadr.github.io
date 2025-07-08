@@ -13,5 +13,8 @@
     {{ content }}
     {% include footer.html %}
     {% include analytics.html %}
+    {% if page.script %}<script>
+{{ page.script }}
+    </script>{% endif %}
   </body>
 </html>

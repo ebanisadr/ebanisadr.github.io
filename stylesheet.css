@@ -394,6 +394,18 @@ figcaption {
   max-width: 90%;
 }
 
+/* Task lists (seems to be a standard class here) */
+
+ul.task-list {
+  list-style: none;
+  padding-left: 10px;
+}
+
+input.task-list-item-checkbox {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /* Tables */
 
 table {
