@@ -1,5 +1,5 @@
 <footer>
-  {% assign latest_post = site.blog | last %}
+  {% assign latest_post = site.blog | concat: site.cookbook | sort: "date" | last %}
   <a href='{{ latest_post.url | prepend: site.url }}'>Latest post on {{ latest_post.date | date_to_string: "ordinal", "US" }}: {% if latest_post.category %}{{latest_post.category}}—{% endif %}{{ latest_post.title }}</a>
   <span class='social-icons'>
   {% for item in site.social-links %}
