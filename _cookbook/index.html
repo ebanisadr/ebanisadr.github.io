@@ -6,7 +6,7 @@ date: 2025-07-07
 <main class='post-listing'>
   <h1>Cookbook</h1>
   <ul>
-    {% assign posts = site.cookbook | where: "layout", "recipe" %}
+    {% assign posts = site.cookbook | where: "layout", "recipe" | sort: "date" | reverse %}
     {% for post in posts %}
     <li>
       <a href='{{ post.url | prepend: site.url }}'>
