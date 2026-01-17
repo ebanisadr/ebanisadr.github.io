@@ -1,8 +1,12 @@
 ---
 layout: post
 date: June 21, 2020
-updated: August 2, 2020
+updated: January 16, 2026
 title: Building this blog with Jekyll
+styles: |
+  body {
+    font-family: 'Inter', var(--body-fonts);
+  }
 ---
 
 I started using Jekyll in high school for a blog that I needed for a class
@@ -80,6 +84,11 @@ U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
 U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`. Then I used
 [Transfonter](https://transfonter.org) to generate the CSS `@font-face` rules to
 make everything work together.
+
+_Edit: In 2026 I swiched the body font to IBM Plex Sans but I kept inter on
+this article for the sake of the above paragraph. These days this type of
+how-to post seems less valuable given that Claude code replicated most of the
+above without reading it first..._
 
 Once I had the minified font files and their corresponding CSS rules, I added
 the rules to my stylesheet and [preload
